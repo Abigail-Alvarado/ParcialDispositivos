@@ -358,13 +358,76 @@ class Carrousel extends StatelessWidget {
               SizedBox(height: 14), //
               contac(),
               SizedBox(height: 14), //
-              contac(),
+              contac2(),
               SizedBox(height: 14), //
               contac(),
             ],
           ),
         ),
       ],
+    );
+  }
+}
+
+class contac2 extends StatelessWidget {
+  const contac2({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 311,
+      height: 147,
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(18), color: Colors.white),
+      child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Row(
+              children: [
+                Icon(
+                  Icons.person_outline_outlined,
+                  size: 30, // Tamaño del icono
+                  color: Colors.blue, // Color del icono
+                ),
+                Text(
+                  " Pedro Lopez",
+                  style: TextStyle(color: Colors.black, fontSize: 12),
+                  textAlign: TextAlign.center,
+                ),
+              ],
+            ),
+            Row(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    estrella(),
+                    estrella(),
+                    estrella(),
+                    estrella(),
+                    estrella()
+                  ],
+                ),
+              ],
+              mainAxisAlignment: MainAxisAlignment.center,
+            ),
+            Row(
+              children: [
+                Text(
+                  '''
+     Esta tutoría ha sido una experiencia transformadora para mí.\n   El tutor ha demostrado un profundo conocimientodel tem  y ha\n   sido capaz de explicar conceptos complejos de una manera \n   clara y comprensible.
+  ''',
+                  style: TextStyle(
+                      fontSize: 10,
+                      height: 1.5, // Espaciado entre líneas
+                      fontFamily: 'Roboto'),
+                  textAlign: TextAlign.start,
+                )
+              ],
+            ),
+          ]),
     );
   }
 }
